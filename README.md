@@ -5,6 +5,27 @@ Exploration of solvability of various sets of equations
 
 Is a system with a given "connectivity" between equations and variables
 "likely" to be solvable?
+
+## Motivation
+
+In aircraft applications, you want to answer a series of interrelated questions based on the same set of equations and variables. For example, consider the range equation:
+
+``` range = V/g * (1/SFC) * L/D * ln(Winit/Wfinal) ```
+
+We can imagine being interested in a series of questions, depending on our goal:
+- [Envelope] : What is the maximum range, given V, SFC, L/D and weight fraction?
+- [Operations] : Given V, SFC, L/D, how much fuel do we need to achieve a range?
+- [Design] : What weight fraction do we need to achieve to get a required range at a specific velocity V?
+
+The answers are found by symbolically rearranging this equation. For more complex problems, there can be many interlinked equations, and the math can get quite tedious.
+
+This code was an experiment to see if I could encode common flight or design equations, and then automatically solve them.
+
+In the end, it was more trouble than it was worth, but it was an interesting experiment.
+
+## Notes
+
+
 - It might not be solvable due to nonlinearities and data-dependence
 - It might not be solvable even if linear, due to redundant equations
 - Even if not clearly solvable, there may be infinite solutions for
