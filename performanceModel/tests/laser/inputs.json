@@ -1,0 +1,12 @@
+{
+    "mass": 19,
+    "rho": 1.225,
+    "V": 20,
+    // "gamma": 14,
+    // "hdot":0,
+    "bank": 0,
+    // "throttle": 0.5
+    // Weirdly, if I set throttle, which goes through torquefactor,
+    // the torque factor gets unhinged and goes all over the place...
+    "TorqueFactor": 0.5
+}

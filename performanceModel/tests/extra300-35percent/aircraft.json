@@ -1,0 +1,12 @@
+{ // Constants for the aircraft [not usually derived from any tests/data]
+  // However, they could be modified as part of design optimization
+  // If so, the "performance model" (model.json) will also change, so then
+  // makePerfModel.py needs to be in the optimization loop somehow.
+    "Sref": 1.292,
+    "AR": 5.6,
+    "P0":8950, // MSL Watts rated
+    "N0":7500, // MSL redline RPM
+    // "Cdropoff":0.12,  // Altitude dropoff parameter
+    "Cdropoff":-1,  // Altitude dropoff parameter [-1 = electric]
+    "propDiam":0.6858
+}
